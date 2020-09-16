@@ -20,13 +20,16 @@ namespace Kiralynok
                 -Elhelyezzük a K-t csak akkor ha üres -> '#'*/
 
             Random vel = new Random();
-            int sor = vel.Next(0,7);
+            for (int i = 0; i < N; i++)
+			{
+                            int sor = vel.Next(0,7);
             int oszlop = vel.Next(0, 7);
             if (T[sor,oszlop] =='#')
             {
                 T[sor, oszlop] = 'K';
             }
-
+            
+			}
         }
 
         public void FajlbaIr()
