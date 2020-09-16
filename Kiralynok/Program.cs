@@ -27,7 +27,7 @@ namespace Kiralynok
 
         }
 
-        public Tabla(char r)
+        public Tabla(char ch)
         {
 
         }
