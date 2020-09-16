@@ -8,7 +8,7 @@ namespace Kiralynok
 {
     class Tabla
     {
-        char[,] T = new char[8,8];
+        char[,] T; 
         char UresCella;
         int UresOszlopokSzama;
         int UresSorokSzama;
@@ -29,7 +29,15 @@ namespace Kiralynok
 
         public Tabla(char ch)
         {
-
+            T = new char[8, 8];
+            UresCella = ch;
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    T[i, j] = UresCella;
+                }
+            }
         }
         public int UresOszlop()
         {
