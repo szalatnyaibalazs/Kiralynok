@@ -22,12 +22,19 @@ namespace Kiralynok
             Random vel = new Random();
             for (int i = 0; i < N; i++)
 			{
-                            int sor = vel.Next(0,7);
-            int oszlop = vel.Next(0, 7);
-            if (T[sor,oszlop] =='#')
-            {
-                T[sor, oszlop] = 'K';
-            }
+                bool igaz = true;
+                while (igaz)
+                {
+                    int sor = vel.Next(0, 8);
+                    int oszlop = vel.Next(0, 8);
+                    if (T[sor, oszlop] == '#')
+                    {
+                        T[sor, oszlop] = 'K';
+                        igaz = false;
+                    }
+
+                }
+
             
 			}
         }
@@ -83,7 +90,7 @@ namespace Kiralynok
             Tabla t = new Tabla('#');
             Console.WriteLine("Üres tábla: ");
             t.Megjelenit();
-            t.Elhelyez(1);
+            t.Elhelyez(10);
             Console.WriteLine();
             t.Megjelenit();
 
