@@ -90,7 +90,7 @@ namespace Kiralynok
             Tabla t = new Tabla('#');
             Console.WriteLine("Üres tábla: ");
             t.Megjelenit();
-            t.Elhelyez(10);
+            t.Elhelyez(8);
             Console.WriteLine();
             t.Megjelenit();
 
