@@ -115,9 +115,27 @@ namespace Kiralynok
             t.Elhelyez(8);
             Console.WriteLine();
             t.Megjelenit();
-            Console.WriteLine("Melyik sor: ");
-            int b = int.Parse(Console.ReadLine());
-            t.UresOszlop(b);
+
+            Console.WriteLine("8. feladat: az üres oszlopok és sorok száma:");
+            int uresSor = 0;
+            int uresOszlop = 0;
+            for (int i = 0; i < 8; i++)
+            {
+                if (t.UresOszlop(i))
+                {
+                    uresOszlop++;
+                }
+            }
+            
+            for (int i = 0; i < 8; i++)
+            {
+                if (t.UresSor(i))
+                {
+                    uresSor++;
+                }
+            }
+            Console.WriteLine("Oszlopok: {0}", uresOszlop);
+            Console.WriteLine("Sorok: {0}",uresSor);
             Console.ReadKey();
         }
     }
