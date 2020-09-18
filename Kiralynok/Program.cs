@@ -68,16 +68,38 @@ namespace Kiralynok
                 }
             }
         }
-        public int UresOszlop()
+        public bool UresOszlop(int oszlop)
         {
-
-            return 0;
+            int i = 0;
+            while (i<8&&T[i,oszlop]!='K')
+            {
+                i++;
+            }
+            if (i<8)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
-        public int UresSor()
+        public bool UresSor(int sor)
         {
-
-            return 0;
+            int i = 0;
+            while (i < 8 && T[sor,i] != 'K')
+            {
+                i++;
+            }
+            if (i < 8)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
     class Program
@@ -93,7 +115,9 @@ namespace Kiralynok
             t.Elhelyez(8);
             Console.WriteLine();
             t.Megjelenit();
-
+            Console.WriteLine("Melyik sor: ");
+            int b = int.Parse(Console.ReadLine());
+            t.UresOszlop(b);
             Console.ReadKey();
         }
     }
